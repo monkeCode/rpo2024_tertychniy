@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
      * which is packaged with this application.
      */
     external fun stringFromJNI(): String
+    external fun initRng(): Int
+    external fun randomBytes(no: Int): ByteArray?
 
     companion object {
         // Used to load the 'laba1' library on application startup.

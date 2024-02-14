@@ -35,3 +35,19 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         # List libraries link to the target library
         android
         log)
+
+
+
+add_library(spdlog STATIC IMPORTED)
+set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
+    /USERS/JOE/PROJECTS/RPO/LIBs/spdlog/build/${ANDROID_ABI}/libspdlog.a)
+target_include_directories(native-lib PUBLIC
+    ./../../../../../spdlog/include)
+    
+
+target_link_libraries( # Specifies the target library.
+    laba1
+    spdlog
+    # Links the target library to the log library
+    # included in the NDK.
+    ${log-lib} )
