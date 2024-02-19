@@ -40,13 +40,21 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
 add_library(spdlog STATIC IMPORTED)
 set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
-        /home/gera/code/rpo2024_tertychniy/laba1/build/spdlog/${ANDROID_ABI}/libspdlog.a)
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../build/spdlog/${ANDROID_ABI}/libspdlog.a)
+
+add_library(mbedcrypto SHARED IMPORTED)
+set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../build/mbedtls/${ANDROID_ABI}/library/libmbedcrypto.so)
+
 target_include_directories(adroidclient PUBLIC
-        /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include)
+        /${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/spdlog/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/mbedtls/include)
+
 
 target_link_libraries( # Specifies the target library.
         adroidclient
         spdlog
+        mbedcrypto
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib} )

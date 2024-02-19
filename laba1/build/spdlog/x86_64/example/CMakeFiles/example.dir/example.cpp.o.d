@@ -1,5 +1,5 @@
 example/CMakeFiles/example.dir/example.cpp.o: \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/example/example.cpp \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/example/example.cpp \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/cstdio \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/features.h \
@@ -73,9 +73,9 @@ example/CMakeFiles/example.dir/example.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/climits \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__undef_macros \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/limits \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/spdlog.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/common.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/null_mutex.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/spdlog.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/common.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/null_mutex.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/atomic \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__threading_support \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/iosfwd \
@@ -105,7 +105,7 @@ example/CMakeFiles/example.dir/example.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__tuple \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/initializer_list \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__debug \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/tweakme.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/tweakme.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/exception \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/cstdlib \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/stdlib.h \
@@ -141,15 +141,15 @@ example/CMakeFiles/example.dir/example.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/wctype.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include/wctype.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/wctype.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/fmt.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/core.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/format.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/fmt.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/core.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/format.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/cmath \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/system_error \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__errc \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/cerrno \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/registry.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/periodic_worker.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/registry.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/periodic_worker.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/condition_variable \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__mutex_base \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/mutex \
@@ -158,23 +158,23 @@ example/CMakeFiles/example.dir/example.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__hash_table \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__node_handle \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/optional \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/synchronous_factory.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/logger.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/backtracer.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/circular_q.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/synchronous_factory.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/logger.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/backtracer.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/circular_q.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/cassert \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/assert.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/vector \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__bit_reference \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__split_buffer \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/log_msg_buffer.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/log_msg.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/version.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/cfg/env.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/cfg/helpers.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/os.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/ostr.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/ostream.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/log_msg_buffer.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/log_msg.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/version.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/cfg/env.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/cfg/helpers.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/os.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/ostr.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/ostream.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/fstream \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/ostream \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/ios \
@@ -193,31 +193,31 @@ example/CMakeFiles/example.dir/example.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/stack \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/deque \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/iomanip \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/stdout_color_sinks.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/ansicolor_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/stdout_color_sinks.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/ansicolor_sink.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/array \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/console_globals.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/formatter.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/basic_file_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/file_helper.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/base_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/rotating_file_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/daily_file_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/chrono.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/chrono.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/console_globals.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/formatter.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/file_helper.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/base_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/rotating_file_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/daily_file_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/chrono.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/chrono.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/sstream \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/callback_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/async.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/async_logger.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/thread_pool.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/mpmc_blocking_q.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bin_to_hex.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/ranges.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/ranges.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/stopwatch.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/udp_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/udp_client.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/callback_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/async.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/async_logger.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/thread_pool.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/mpmc_blocking_q.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bin_to_hex.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/ranges.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/ranges.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/stopwatch.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/udp_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/udp_client.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arpa/inet.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/netinet/in.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/endian.h \
@@ -260,9 +260,9 @@ example/CMakeFiles/example.dir/example.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/bits/fortify/unistd.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/android/legacy_unistd_inlines.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/bits/swab.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/syslog_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/syslog_sink.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/syslog.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/sinks/android_sink.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/details/fmt_helper.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/sinks/android_sink.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/details/fmt_helper.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/android/log.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/pattern_formatter.h
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/pattern_formatter.h

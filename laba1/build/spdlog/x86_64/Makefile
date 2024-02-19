@@ -57,10 +57,10 @@ RM = /home/gera/Android/Sdk/cmake/3.22.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gera/code/rpo2024_tertychniy/laba1/spdlog
+CMAKE_SOURCE_DIR = /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gera/code/rpo2024_tertychniy/laba1/build/x86_64
+CMAKE_BINARY_DIR = /home/gera/code/rpo2024_tertychniy/laba1/build/spdlog/x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/home/gera/Android/Sdk/cmake/3.22.1/bin/cpack --config ./CPackSourceConfig.cmake /home/gera/code/rpo2024_tertychniy/laba1/build/x86_64/CPackSourceConfig.cmake
+	/home/gera/Android/Sdk/cmake/3.22.1/bin/cpack --config ./CPackSourceConfig.cmake /home/gera/code/rpo2024_tertychniy/laba1/build/spdlog/x86_64/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gera/code/rpo2024_tertychniy/laba1/build/x86_64/CMakeFiles /home/gera/code/rpo2024_tertychniy/laba1/build/x86_64//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gera/code/rpo2024_tertychniy/laba1/build/spdlog/x86_64/CMakeFiles /home/gera/code/rpo2024_tertychniy/laba1/build/spdlog/x86_64//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gera/code/rpo2024_tertychniy/laba1/build/x86_64/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gera/code/rpo2024_tertychniy/laba1/build/spdlog/x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

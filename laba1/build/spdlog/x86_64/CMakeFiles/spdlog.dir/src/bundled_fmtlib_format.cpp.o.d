@@ -1,6 +1,6 @@
 CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/src/bundled_fmtlib_format.cpp \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/format-inl.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/src/bundled_fmtlib_format.cpp \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/format-inl.h \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/algorithm \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/features.h \
@@ -154,5 +154,5 @@ CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/ios \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/streambuf \
   /home/gera/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__bsd_locale_fallbacks.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/format.h \
-  /home/gera/code/rpo2024_tertychniy/laba1/spdlog/include/spdlog/fmt/bundled/core.h
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/format.h \
+  /home/gera/code/rpo2024_tertychniy/laba1/libs/spdlog/include/spdlog/fmt/bundled/core.h
