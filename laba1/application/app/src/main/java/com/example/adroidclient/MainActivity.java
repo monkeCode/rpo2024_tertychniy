@@ -11,6 +11,10 @@ import com.example.adroidclient.databinding.ActivityMainBinding;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.logging.Logger;
+ 
+import org.apache.commons.codec.DecoderException;
+import org.apache.commons.codec.binary.Hex;
+    
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +47,26 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = binding.sampleText;
         tv.setText(s);
     }
+            
+    public static byte[] stringToHex(String s)
+    {
+        byte[] hex;
+        try
+        {
+            hex = Hex.decodeHex(s.toCharArray());
+        }
+        catch (DecoderException ex)
+        {
+            hex = null;
+        }
+        return hex;
+    }
+    
+    public void onButtonClick(View v)
+    {
+        Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+    }
+   
 
     /**
      * A native method that is implemented by the 'adroidclient' native library,
