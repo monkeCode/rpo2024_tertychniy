@@ -32,6 +32,7 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
 # can link libraries from various origins, such as libraries defined in this
 # build script, prebuilt third-party libraries, or Android system libraries.
 
+#set(MBEDTLS_USE_SHARED_MBEDTLS_LIBRARY On)
 
 add_subdirectory(spdlog)
 

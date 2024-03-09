@@ -13,14 +13,15 @@ import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.DecoderException;
 
 import java.nio.charset.StandardCharsets;
-    
+
 
 public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'adroidclient' library on application startup.
     static {
         System.loadLibrary("adroidclient");
-        System.loadLibrary("mbedcrypto");
+        //System.loadLibrary("spdlog");
+        //System.loadLibrary("mbedcrypto");
     }
 
     private ActivityMainBinding binding;
@@ -31,20 +32,20 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         // Example of a call to a native method
         int num = initRng();
-        byte[] key = randomBytes(10);
+        byte[] key = randomBytes(16);
 
         String s = "super test text";
         byte[] testData = s.getBytes(StandardCharsets.UTF_8);
 
         byte[] encrypted = encrypt(key, testData);
-        byte[] decrypted = encrypt(key, encrypted);
+        byte[] decrypted = decrypt(key, encrypted);
 
         String res = new String(decrypted, StandardCharsets.UTF_8);
+        log(res);
         TextView tv = binding.sampleText;
-        tv.setText(s);
+        tv.setText(res);
     }
             
     public static byte[] stringToHex(String s)
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'adroidclient' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    public native void log(String value);
     public static native int initRng();
     public static native byte[] randomBytes(int no);
     public static native byte[] encrypt(byte[] key,byte[] data);

@@ -17,14 +17,12 @@ char *personalization = "my-mega-app";
 #define SLOG_INFO(...) android_logger->info( __VA_ARGS__ )
 auto android_logger = spdlog::android_logger_mt("android", "android_client_ndk");
 
-extern "C" JNIEXPORT jstring
+extern "C" JNIEXPORT void
 
 JNICALL
-Java_com_example_adroidclient_MainActivity_stringFromJNI(JNIEnv *env, jobject /* this */) {
-    std::string hello = "Hello from C++";
-    LOG_INFO("Hello from c++ %d", 2024);
-    SLOG_INFO("Hello from spdlog {0}", 2024);
-    return env->NewStringUTF(hello.c_str());
+Java_com_example_adroidclient_MainActivity_log(JNIEnv *env, jobject ,jstring value/* this */){
+    const char *str = env->GetStringUTFChars(value, 0);
+    SLOG_INFO("Hello from spdlog {0}", str);
 }
 
 extern "C"
