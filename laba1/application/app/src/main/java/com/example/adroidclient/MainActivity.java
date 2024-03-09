@@ -1,19 +1,18 @@
 package com.example.adroidclient;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.os.Debug;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.adroidclient.databinding.ActivityMainBinding;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Base64;
-import java.util.logging.Logger;
- 
-import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.DecoderException;
+
+import java.nio.charset.StandardCharsets;
     
 
 public class MainActivity extends AppCompatActivity {
@@ -54,10 +53,8 @@ public class MainActivity extends AppCompatActivity {
         try
         {
             hex = Hex.decodeHex(s.toCharArray());
-        }
-        catch (DecoderException ex)
-        {
-            hex = null;
+        } catch (DecoderException e) {
+            throw new RuntimeException(e);
         }
         return hex;
     }
