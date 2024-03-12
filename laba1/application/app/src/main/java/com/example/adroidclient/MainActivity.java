@@ -1,10 +1,16 @@
 package com.example.adroidclient;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.adroidclient.databinding.ActivityMainBinding;
@@ -26,9 +32,25 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
+    ActivityResultLauncher activityResultLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        activityResultLauncher  = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                (ActivityResultCallback<ActivityResult>) result -> {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        // обработка результата
+                        assert data != null;
+                        String pin = data.getStringExtra("pin");
+                        Toast.makeText(MainActivity.this, pin, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -47,7 +69,14 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = binding.sampleText;
         tv.setText(res);
     }
-            
+
+    public void onButtonClick(View v)
+    {
+        Intent it = new Intent(this, PinpadActivity.class);
+        //startActivity(it);
+        activityResultLauncher.launch(it);
+    }
+
     public static byte[] stringToHex(String s)
     {
         byte[] hex;
@@ -60,10 +89,14 @@ public class MainActivity extends AppCompatActivity {
         return hex;
     }
     
-    public void onButtonClick(View v)
-    {
-        Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
-    }
+//    public void onButtonClick(View v)
+//    {
+//        byte[] key = stringToHex("0123456789ABCDEF0123456789ABCDE0");
+//        byte[] enc = encrypt(key, stringToHex("000000000000000102"));
+//        byte[] dec = decrypt(key, enc);
+//        String s = new String(Hex.encodeHex(dec)).toUpperCase();
+//        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+//    }
    
 
     /**
