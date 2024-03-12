@@ -25,6 +25,9 @@ public class PinpadActivity extends AppCompatActivity {
         ShuffleKeys();
 
         findViewById(R.id.btnOK).setOnClickListener((View) -> {
+            Intent it = new Intent();
+            it.putExtra("pin", pin);
+            setResult(RESULT_OK, it);
             finish();
         });
 
@@ -43,22 +46,13 @@ public class PinpadActivity extends AppCompatActivity {
         {
             pin += key;
             tvPin.setText("****".substring(3 - sz));
+            ShuffleKeys();
         }
-        if (key.equals("Ok")) {
-            findViewById(R.id.btnOK).setOnClickListener((View) -> {
-                Intent it = new Intent();
-                it.putExtra("pin", pin);
-                setResult(RESULT_OK, it);
-                finish();
-            });
-            return;
-        }
-        ShuffleKeys();
     }
 
 
     private void ShuffleKeys() {
-        Button keys[] = new Button[] {
+        Button[] keys = new Button[] {
                 findViewById(R.id.btnKey0),
                 findViewById(R.id.btnKey1),
                 findViewById(R.id.btnKey2),

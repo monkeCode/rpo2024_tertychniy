@@ -34,9 +34,9 @@
             <Button android:id="@+id/btnKey7" android:text="7" android:onClick="keyClick" style="@style/PadButton" />
             <Button android:id="@+id/btnKey8" android:text="8" android:onClick="keyClick" style="@style/PadButton" />
             <Button android:id="@+id/btnKey9" android:text="9" android:onClick="keyClick" style="@style/PadButton" />
-            <Button android:id="@+id/btnReset" android:text="C" android:onClick="keyClick" style="@style/PadButton" />
+            <Button android:id="@+id/btnReset" android:text="C" style="@style/PadButton" />
             <Button android:id="@+id/btnKey0" android:text="0" android:onClick="keyClick" style="@style/PadButton" />
-            <Button android:id="@+id/btnOK" android:text="OK" android:onClick="keyClick" style="@style/PadButton" />
+            <Button android:id="@+id/btnOK" android:text="OK" style="@style/PadButton" />
         </GridLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

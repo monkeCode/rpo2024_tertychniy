@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initRng();
 
         activityResultLauncher  = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -54,20 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        // Example of a call to a native method
-        int num = initRng();
-        byte[] key = randomBytes(16);
-
-        String s = "super test text";
-        byte[] testData = s.getBytes(StandardCharsets.UTF_8);
-
-        byte[] encrypted = encrypt(key, testData);
-        byte[] decrypted = decrypt(key, encrypted);
-
-        String res = new String(decrypted, StandardCharsets.UTF_8);
-        log(res);
-        TextView tv = binding.sampleText;
-        tv.setText(res);
     }
 
     public void onButtonClick(View v)
