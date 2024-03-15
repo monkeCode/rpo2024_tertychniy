@@ -21,7 +21,7 @@ import org.apache.commons.codec.DecoderException;
 import java.nio.charset.StandardCharsets;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TransactionEvents {
 
     // Used to load the 'adroidclient' library on application startup.
     static {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         initRng();
 
-        activityResultLauncher  = registerForActivityResult(
+        activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 (ActivityResultCallback<ActivityResult>) result -> {
                     if (result.getResultCode() == Activity.RESULT_OK) {
@@ -57,25 +57,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
-    public void onButtonClick(View v)
-    {
+    public void onButtonClick(View v) {
         Intent it = new Intent(this, PinpadActivity.class);
         //startActivity(it);
         activityResultLauncher.launch(it);
     }
 
-    public static byte[] stringToHex(String s)
-    {
+    public static byte[] stringToHex(String s) {
         byte[] hex;
-        try
-        {
+        try {
             hex = Hex.decodeHex(s.toCharArray());
         } catch (DecoderException e) {
             throw new RuntimeException(e);
         }
         return hex;
     }
-    
+
 //    public void onButtonClick(View v)
 //    {
 //        byte[] key = stringToHex("0123456789ABCDEF0123456789ABCDE0");
@@ -84,16 +81,38 @@ public class MainActivity extends AppCompatActivity {
 //        String s = new String(Hex.encodeHex(dec)).toUpperCase();
 //        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
 //    }
-   
+
 
     /**
      * A native method that is implemented by the 'adroidclient' native library,
      * which is packaged with this application.
      */
     public native void log(String value);
+
     public static native int initRng();
+
     public static native byte[] randomBytes(int no);
-    public static native byte[] encrypt(byte[] key,byte[] data);
+
+    public static native byte[] encrypt(byte[] key, byte[] data);
+
     public static native byte[] decrypt(byte[] key, byte[] data);
 
+    private String pin;
+
+    @Override
+    public String enterPin(int ptc, String amount) {
+        pin = "";
+        Intent it = new Intent(MainActivity.this, PinpadActivity.class);
+        it.putExtra("ptc", ptc);
+        it.putExtra("amount", amount);
+        synchronized (MainActivity.this) {
+            activityResultLauncher.launch(it);
+            try {
+                MainActivity.this.wait();
+            } catch (Exception ex) {
+                //todo: log error
+            }
+        }
+        return pin;
+    }
 }
