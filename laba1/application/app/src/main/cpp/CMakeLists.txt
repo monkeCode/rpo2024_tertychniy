@@ -26,30 +26,26 @@ project("adroidclient")
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        native-lib.cpp)
+       native-lib.cpp)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
 # build script, prebuilt third-party libraries, or Android system libraries.
-target_link_libraries(${CMAKE_PROJECT_NAME}
-        # List libraries link to the target library
-        android
-        log)
 
+add_subdirectory(spdlog)
+add_subdirectory(mbedtls)
 
-
-add_library(spdlog STATIC IMPORTED)
-set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../build/spdlog/${ANDROID_ABI}/libspdlog.a)
-
-add_library(mbedcrypto SHARED IMPORTED)
-set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../build/mbedtls/${ANDROID_ABI}/library/libmbedcrypto.so)
+#add_library(spdlog STATIC IMPORTED)
+#set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
+#        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../build/spdlog/${ANDROID_ABI}/libspdlog.a)
+#
+#add_library(mbedcrypto SHARED IMPORTED)
+#set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
+#        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../build/mbedtls/${ANDROID_ABI}/library/libmbedcrypto.so)
 
 target_include_directories(adroidclient PUBLIC
-        /${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/spdlog/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/mbedtls/include)
-
+        spdlog/include
+        mbedtls/include)
 
 target_link_libraries( # Specifies the target library.
         adroidclient
@@ -58,3 +54,5 @@ target_link_libraries( # Specifies the target library.
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib} )
+
+

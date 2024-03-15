@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     // Used to load the 'adroidclient' library on application startup.
     static {
         System.loadLibrary("adroidclient");
-        System.loadLibrary("mbedcrypto");
+        //System.loadLibrary("mbedcrypto");
     }
 
     private ActivityMainBinding binding;
@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         int num = initRng();
-        byte[] key = randomBytes(10);
+        byte[] key = randomBytes(16);
 
-        String s = "super test text";
+        String s = "1234567887654321";
         byte[] testData = s.getBytes(StandardCharsets.UTF_8);
 
         byte[] encrypted = encrypt(key, testData);
-        byte[] decrypted = encrypt(key, encrypted);
+        byte[] decrypted = decrypt(key, encrypted);
 
         String res = new String(decrypted, StandardCharsets.UTF_8);
         TextView tv = binding.sampleText;
-        tv.setText(s);
+        tv.setText(res);
     }
 
     /**
